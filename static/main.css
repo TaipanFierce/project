@@ -1,0 +1,135 @@
+body{
+    background-color: #9DD3DB;
+}
+
+.fon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(img/rus.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    opacity: 0.3; filter: alpha(opacity=30);
+    box-shadow: inset 6px 8px 200px 3px #FFF;
+}
+
+.header {
+    padding: 40px;
+    margin: 0;
+    text-align: center;
+
+}
+
+.footer {
+    background: #9FE09F;
+    padding: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.col-xs-12 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-shadow:  3px 12px 8px black, 0 0 10em #9DD3DB;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.nav-tabs {
+    padding-top: 10px;
+}
+
+
+.about {
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 2;
+    font-family: 'PFBeauSansPro-SeBold', Trebuchet MS, sans-serif;
+}
+
+.carousel_my {
+    padding-top: 100px;
+}
+
+.table_carousel {
+    margin-top: 15px;
+}
+
+.img {
+    text-align: center;
+    margin: 0 0 50px 25px;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+.imgwork {
+    text-align: center;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    margin: 5px auto;
+}
+
+.contact {
+    margin-top: 30px;
+    opacity: 0.7;
+}
+
+.contact_text {
+    margin-top: 140px;
+    font-size: 20px;
+    line-height: 2;
+    font-family: 'PFBeauSansPro-SeBold', Trebuchet MS, sans-serif;
+}
+
+.reviews {
+    margin-top: 30px;
+    font-size: 18px;
+    border: solid 1px;
+    padding: 20px;
+    border-color: #00008b;
+}
+
+#customer {
+    font-size: 14px;
+
+}
+#review_text {
+    font-size: 14px;
+
+}
+
+.text_label {
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.btn {
+    margin: 20px 0;
+}
+
+legend {
+    margin-top: 15px;
+}
+
+fieldset {
+    padding: 15px;
+}
+
+input {
+    border-radius: 5px;
+    font: 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 5px;
+    margin: 0 0 5px 160px;
+    width:250px
+}
+
+textarea {
+    border-radius: 5px;
+    font: 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 5px;
+    margin: 5px 0 0 185px;
+    width:250px
+}

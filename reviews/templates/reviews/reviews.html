@@ -1,0 +1,67 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отзывы</title>
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+</head>
+<body>
+<div class="fon">t</div>
+<div class="container">
+    <div class="row header">
+        <div class="col-xs-12">Проектное Бюро Независимых Проектировщиков</div>
+    </div>
+    <div class="container">
+        <div>
+            <ul class="nav nav-tabs">
+                  <li role="presentation"><a href="{% url 'about:about' %}">О Бюро</a></li>
+                  <li role="presentation"><a href="{% url 'objects:objects' %}">Объекты</a></li>
+                  <li role="presentation" class="active"><a href="{% url 'reviews:reviews' %}">Отзывы</a></li>
+                  <li role="presentation"><a href="{% url 'contacts:contacts' %}">Контакты</a></li>
+            </ul>
+        </div>
+    <div class="col-md-12 reviews">
+        {% if latest_reviews_list %}
+            {% for review in latest_reviews_list %}
+                <ul class="reviews">
+                <p>{{ review.customer }}</p>
+                <ol>{{ review.review_text }}</ol>
+                <ol>{{ review.pub_date }}</ol>
+                </ul>
+            {% endfor %}
+        {% else %}
+            <p>No polls are available.</p>
+        {% endif %}
+    </div>
+        <div class="col-md-8">
+            <fieldset><legend>Оставить отзыв</legend>
+                <form action="{% url 'reviews:create'%}" method="POST" class="post-form">{% csrf_token %}
+                    {{ form.as_p }}
+                    <label class="text_label" for="customer">Заказчик</label>
+                    <input type="text"  name="customer" id="customer" required placeholder="Введите имя или бренд..."/><br>
+                    <label class="text_label" for="review_text">Отзыв</label>
+                    <textarea name='review_text' id="review_text" rows="3" cols="20" required placeholder=" Введите текст..."></textarea><br>
+                    <input type="submit" class="btn btn-success btn-lg pull-left" value="Отправить">
+                </form>
+            </fieldset>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+{#    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}#}
+{#<form action="{% url 'reviews:reviews' latest_reviews_list.id %}" method="post">#}
+{#{% csrf_token %}#}
+{#    <label for="customer">Заказчик</label><input type="text" size="50" name="customer" id="customer" /><br>#}
+{#    <label for="review_text">Отзыв</label><input type="text" size="50" name="review_text" id="review_text" /><br>#}
+{#    <input type="submit" value="Оставить отзыв" />#}
+{#</form>#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

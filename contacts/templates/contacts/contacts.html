@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+</head>
+<body>
+<div class="fon"></div>
+<div class="container">
+        <div class="row header">
+            <div class="col-xs-12">Проектное Бюро Независимых Проектировщиков</div>
+        </div>
+    <div class="container">
+        <div>
+            <ul class="nav nav-tabs">
+                  <li role="presentation"><a href="{% url 'about:about' %}">О Бюро</a></li>
+                  <li role="presentation"><a href="{% url 'objects:objects' %}">Объекты</a></li>
+                  <li role="presentation"><a href="{% url 'reviews:reviews' %}">Отзывы</a></li>
+                  <li role="presentation" class="active"><a href="{% url 'contacts:contacts' %}">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="row contact">
+            <div class="col-md-6"><img src="{% static 'img/contact.png' %}" width="450" height="400"></div>
+            <div class="contact_text">
+                    <p><label>Наименование: </label> Проектное Бюро </p>
+                    <p><label>Email: </label> bureau@mail.ru </p>
+                    <p><label>Телефон: </label> +7-951-679-30-98 </p></div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

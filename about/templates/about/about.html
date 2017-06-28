@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>О Бюро</title>
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+</head>
+<body>
+<div class="fon"></div>
+<div class="container">
+        <div class="row header">
+            <div class="col-xs-12">Проектное Бюро Независимых Проектировщиков</div>
+        </div>
+        <div>
+            <ul class="nav nav-tabs">
+                  <li role="presentation" class="active"><a href="{% url 'about:about' %}">О Бюро</a></li>
+                  <li role="presentation"><a href="{% url 'objects:objects' %}">Объекты</a></li>
+                  <li role="presentation"><a href="{% url 'reviews:reviews' %}">Отзывы</a></li>
+                  <li role="presentation"><a href="{% url 'contacts:contacts' %}">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-7 col-xs-7 about">
+                <p>Проектное бюро, занимающееся комплексным проектированием.<br>
+                Быстро и качественно наши специалисты смогут разработать проект для объекта промышленного или жилого назначения.
+                Большой опыт работы позволяет нам делать проекты различного типа.<br>
+                В основе бюро: квалифицированные ведущие специалисты с большим опытом проектирования.<br>
+                Внимательно слушаем заказчика и вникаем в его потребности, но никогда не идем на поводу неудачных идей.
+                После создания проекта мы всегда просим наших клиентов написать отзыв о нашей работе,
+                это помогает нам становиться лучше и держать сервис на высоком уровне.<br>
+                Так же вы можете заказать у нас дизайн проект, мы подробно расскажем о процессе его разработки и развеем ваши сомнения.<br>
+                Мы поможем сделать интересный грамотный проект.</p>
+                <p>Перечень необходимых исходных данных, для начала работ:<br>
+                        - техническое задание;<br>
+
+                        - технические условия;<br>
+
+                        - поэтажные планы здания, дома или объекта;<br>
+
+                        - список существующих приборов, установок, оборудования с указанием их характеристик.<br>
+                </p>
+                <p>Мы работаем с физическими и юридическими лицами.</p>
+            </div>
+            <div class="col-md-5 col-xs-5">
+                <img src="{% static 'img/fon.png' %}" width="525" height="400">
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
