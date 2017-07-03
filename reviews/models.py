@@ -12,7 +12,7 @@ class Reviews(models.Model):
     pub_date = models.DateTimeField('date published', default=timezone.now)
 
     def __str__(self):
-        return str(self.customer) + str(self.review_text)
+        return "{customer} {text}".format(customer=self.customer, text=self.review_text)
 
     def was_published_recently(self):
         now = timezone.now()
